@@ -16,7 +16,6 @@ module.exports = {
     var repo = tf.create();
     var obj = repo.merge({id: 'x', foo: 'poo'});
 
-    obj.ver = obj.ver + 1;
     obj.foo = 'yow';
     
     var updated = repo.merge(obj);
@@ -31,7 +30,7 @@ module.exports = {
     obj.foo = 'yow';
     
     var updated = repo.merge(obj);
-    assert.eql({id: 'x', foo: 'poo', ver: 0}, updated); // Unchanged
+    assert.eql(undefined, updated); // Rejected
   },
 
   'pulling brings in changes from origin': function(beforeExit, assert) {
@@ -63,16 +62,16 @@ module.exports = {
     assert.eql({id: 'y',  kind: 'mooo', ver: 0}, local.get('y'));  // Unaffected
     assert.eql({id: 'x', color: 'pink', ver: 0}, local.get('x'));// Pulled
   },
-  
+
 
   "Local changes don't affect the origin": function(beforeExit, assert) {
     var origin = tf.create();
     origin.merge({id: 'x', color: "pink"});
-    
+
     var local = tf.create(origin);
     local.pull();
-    local.merge({id: 'x', color: 'blue', ver: 1});
-    
+    local.merge({id: 'x', color: 'blue', ver: 0});
+
     assert.eql({id: 'x', color: 'blue', ver: 1},  local.get('x')); // Updated
     assert.eql({id: 'x', color: 'pink', ver: 0}, origin.get('x')); // Unaffected
   }  
