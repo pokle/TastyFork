@@ -2,13 +2,13 @@
   "author": "Tushar Pokle <tushar.pokle@gmail.com>",
   "name": "TastyFork",
   "description": "TastyFork gives you a Key-Value store that can be sync’d with remote TastyFork stores. It is transport and database agnostic - you provide these through hooks.",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "repository": {
     "type": "git",
     "url": "git://github.com/pokle/TastyFork.git"
   },
   "engines": {
-    "node": "~0.6.7"
+    "node": ">0.6.7"
   },
   "dependencies": {
     "underscore": "~1"

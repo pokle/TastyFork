@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 coverage() {
   rm -rf lib-cov
@@ -9,5 +9,5 @@ coverage() {
 }
 
 export NODE_PATH=lib
-#coverage
+coverage
 expresso
