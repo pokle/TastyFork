@@ -1,5 +1,7 @@
 # TastyFork
 
+[![Build Status](https://travis-ci.org/pokle/TastyFork.png?branch=master)](https://travis-ci.org/pokle/TastyFork)
+
 ## Concept
 
 Multiple people editing the same document without tears.
