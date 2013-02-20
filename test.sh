@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
 
+PATH="./node_modules/.bin/:$PATH"
+
+
 coverage() {
   rm -rf lib-cov
-  jscoverage --no-highlight lib lib-cov
-  if [ $? == 0 ]; then
-    NODE_PATH=lib-cov
-  fi
+  node-jscoverage lib lib-cov &&
+    export NODE_PATH=lib-cov
 }
 
 export NODE_PATH=lib
