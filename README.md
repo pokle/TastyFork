@@ -1,6 +1,7 @@
 # TastyFork
 
 [![Build Status](https://travis-ci.org/pokle/TastyFork.png?branch=master)](https://travis-ci.org/pokle/TastyFork)
+[![Circle CI Build Status](https://circleci.com/gh/pokle/TastyFork.png?circle-token=6b4b88a0d80e58c518f0cbdd364e5e279f8c036b)](https://circleci.com/gh/pokle/TastyFork)
 
 ## Concept
 
